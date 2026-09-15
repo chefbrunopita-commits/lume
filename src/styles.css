@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@theme {
+  --color-bg: #0a0a0b; --color-surface: #121214; --color-surface-hover: #1a1a1e;
+  --color-elevated: #1c1c21; --color-fg: #f4f4f5; --color-muted: #a1a1aa; --color-subtle: #71717a;
+  --color-border: rgb(244 244 245 / 0.08); --color-accent: #c8ccd4; --color-accent-fg: #0a0a0b;
+  --color-danger: #f87171; --color-ok: #86efac;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+}
+@layer base {
+  html { color-scheme: dark; }
+  html, body, #root { min-height: 100dvh; background: var(--color-bg); color: var(--color-fg); }
+  body { font-family: var(--font-sans); }
+  button:not(:disabled) { cursor: pointer; }
+}
+.field { height: 2.75rem; width: 100%; border-radius: 0.75rem; background: var(--color-elevated); padding: 0 0.75rem; color: var(--color-fg); }
+.prose-lume { line-height: 1.65; }
+.prose-lume pre { background: var(--color-elevated); border-radius: 16px; padding: 1rem; overflow-x: auto; }
